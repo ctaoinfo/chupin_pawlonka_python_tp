@@ -1,25 +1,28 @@
+from currency_converter import CurrencyConverter
+
 class CurrencyConverter:
-	def __init__(self, currency):
-		self.currency = currency
-		pass
+	def __init__(self, _initCurrency, _toCurrency, _currencies):
+		self._currencies = CurrencyConverter().currencies
+		self._initCurrency = _initCurrency
+		self._toCurrency = _toCurrency
 
 	@property
-	def currency(self):
-		return self.currency
+	def initCurrency(self):
+		return self._initCurrency
 
-	@currency.setter
-	def currency(self):
-		self.currency = [
-			{"name": "Euro", "value": 1}, 
-			{"name": "Dollar Americain", "value": 1.0571}, 
-			{"name": "Livre Sterling", "value": 0.8697},
-			{"name": "Yen", "value": 157.5774},
-			{"name": "Franc Suisse", "value": 0.9680},
-			{"name": "Rouble Russe", "value": 102.1197},
-			{"name": "Dirham Marocain", "value": 10.8502},
-			{"name": "Dong Vietnamien", "value": 25 777.6167}]
-		pass
+	@property
+	def toCurrency(self):
+		return self._toCurrency
 
+	@initCurrency.setter
+	def initCurrency(self, value):
+		self._initCurrency = value
 
-	## calcul de notre valeur
-	def convert_currency(self, value):
+	@toCurrency.setter
+	def toCurrency(value, value):
+		self._toCurrency = value
+
+	def converter(self, value):
+		return CurrencyConverter().convert(value, self._initCurrency, self._toCurrency)
+
+	co
