@@ -1,16 +1,12 @@
 class ConjugationOfVerbs:
-	def __init__(self, pronoun):
-		self.pronoun = pronoun
+	def __init__(self, pronouns):
+		self.pronouns = pronouns
 		pass
 
 	@property
-	def pronoun(self):
-		return self.pronoun
-
-	@pronoun.setter
-	def pronoun(self):
-		self.pronoun = ['Je', "Tu", "Il/Elle", "Nous", "Vous", "Ils/Elles"]
-		pass
+	def pronouns(self):
+		self.pronouns = ['Je', "Tu", "Il/Elle", "Nous", "Vous", "Ils/Elles"]
+		return self.pronouns
 
 	## Indicatif
 	## présent
