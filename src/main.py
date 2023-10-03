@@ -1,4 +1,8 @@
-from currency_converter import CurrencyConverter
+from tkinter import * 
 
+fenetre = Tk()
 
-print(CurrencyConverter().currencies)
+label = Label(fenetre, text="Hello World")
+label.pack()
+showMenu()
+fenetre.mainloop()

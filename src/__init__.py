@@ -1,1 +1,1 @@
-from .chupin_pawlonka_TP1_B2 import *
+from .src import *
