@@ -1,8 +1,6 @@
-from tkinter import * 
+from app_tkinter.app import *
 
-fenetre = Tk()
-
-label = Label(fenetre, text="Hello World")
-label.pack()
-showMenu()
-fenetre.mainloop()
+if __name__ == "__main__":
+	app = Menu()
+	app.title("Test")
+	app.mainloop()

@@ -24,5 +24,3 @@ class CurrencyConverter:
 
 	def converter(self, value):
 		return CurrencyConverter().convert(value, self._initCurrency, self._toCurrency)
-
-	co

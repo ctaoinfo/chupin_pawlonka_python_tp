@@ -21,18 +21,18 @@ class Calculate:
 		self.result = value
 		pass
 
-	def addition(self, self.number, self.result):
-		self.result += x
+	def addition(self):
+		self.result += self.number
 		pass
 
-	def substraction(self, self.number, self.result):
-		self.result -= x
+	def substraction(self):
+		self.result -= self.number
 		pass
 
-	def multiplication(self, self.number, self.result):
-		self.result *= x
+	def multiplication(self):
+		self.result *= self.number
 		pass
 
-	def division(self, self.number, self.result):
-		self.result /= x
+	def division(self):
+		self.result /= self.number
 		pass

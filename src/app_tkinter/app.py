@@ -1,15 +1,99 @@
-from tkinter import *
+from tkinter import * 
 import tkinter as tk
+from modules.chupin_pawlonka_TP1_B2.tp1_1_calculate import *
 
-class App(tk.Tk):
+class Menu(tk.Tk):
 	def __init__(self):
 		tk.Tk.__init__(self)
-		self.value = StringVar()
 		self.showMenu()
 
+	def calculateFrame(self):
+		self.entry = tk.Entry(self.Frame1, width=40)
+		self.entry.pack(pady=20)
+		self.label = tk.Label(self.Frame1, text="")
+		self.label.pack(padx=30, pady=20)
+		
+		self.buttonAdd = tk.Button(self.Frame2, bg="grey", text="+", command=self.choiceTp)
+		self.buttonSub = tk.Button(self.Frame2, bg="grey", text="-", command=self.choiceTp)
+		self.buttonDiv = tk.Button(self.Frame2, bg="grey", text="/", command=self.choiceTp)
+		self.buttonMul = tk.Button(self.Frame2, bg="grey", text="x", command=self.choiceTp)
+		self.buttonAdd.pack()
+		self.buttonSub.pack()
+		self.buttonDiv.pack()
+		self.buttonMul.pack()
+
+	def sumFactorialFrame(self):
+		pass
+
+	def conjugaitionFrame(self):
+		pass
+
+	def currencyConverterFrame(self):
+		pass
+
+	def choiceTp1(self):
+		var = self.value.get()
+		self.Frame1.pack_forget()
+		self.Frame2.pack_forget()
+		if var == "":
+			pass
+		elif var == "1":
+			self.calculateFrame()
+		elif var == "2":
+			pass
+		elif var == "3":
+			pass
+		elif var == "4":
+			pass
+
+	def choiceTp2(self):
+		var = self.value.get()
+		self.Frame1.pack_forget()
+		self.Frame2.pack_forget()
+		if var == "":
+			pass
+		elif var == "1":
+			pass
+		elif var == "2":
+			pass
+		elif var == "3":
+			pass
+		elif var == "4":
+			pass
+
+	def choiceTp3(self):
+		var = self.value.get()
+		self.Frame1.pack_forget()
+		self.Frame2.pack_forget()
+		if var == "":
+			pass
+		elif var == "1":
+			pass
+		elif var == "2":
+			pass
+		elif var == "3":
+			pass
+		elif var == "4":
+			pass
+	
+	def choiceTp4(self):
+		var = self.value.get()
+		self.Frame1.pack_forget()
+		self.Frame2.pack_forget()
+		if var == "":
+			pass
+		elif var == "1":
+			pass
+		elif var == "2":
+			pass
+		elif var == "3":
+			pass
+		elif var == "4":
+			pass
+
 	def choiceTp(self):
-		print(self.value)
-		var = self.value
+		print(self.value.get())
+		var = self.value.get()
 		if var == "":
 			pass
 		elif var == "1":
@@ -35,56 +119,10 @@ class App(tk.Tk):
 			self.button2.config(text="TP 4.2 - ")
 			self.button3.config(text="TP 4.3 - ")
 			self.button4.config(text="TP 4.4 - ")
-			self.button.config(command=self.choiceTp4)
-
-	
-	def choiceTp1(self):
-		var = self.value
-		if var == "":
-			pass
-		elif var == "1":
-			self.calculateFrame()
-		elif var == "2":
-			self.destroy()
-		elif var == "3":
-			self.destroy()
-		elif var == "4":
-			self.destroy()
-
-	def choiceTp2(self):
-		pass
-
-	def choiceTp3(self):
-		pass
-	
-	def choiceTp4(self):
-		pass
-		
-	
-
-	def calculateFrame(self):
-		self.destroy()
-		# frame 1
-		self.Frame1 = tk.Frame(self, borderwidth=2, relief=GROOVE)
-		self.Frame1.pack(side=LEFT, padx=30, pady=30)
-
-		# frame 2
-		self.Frame2 = tk.Frame(self, borderwidth=2, relief=GROOVE)
-		self.Frame2.pack(side=LEFT, padx=10, pady=10)
-
-		# Ajout de labels
-		self.Label(self.Frame1, text="test").pack(padx=10, pady=10)
-
-	def sumFactorialFrame(self):
-		pass
-
-	def conjugaitionFrame(self):
-		pass
-
-	def currencyConverterFrame(self):
-		pass
+			self.button.config(command=self.choiceTp4)		
 
 	def showMenu(self):
+		self.value = StringVar()
 		self.value.set("")
 		# frame 1
 		self.Frame1 = tk.Frame(self, borderwidth=2, relief=GROOVE)
@@ -114,9 +152,3 @@ class App(tk.Tk):
 
 		self.exitButton = tk.Button(self.Frame2, bg="grey", text="Quitter", command=self.destroy)
 		self.exitButton.pack()
-
-if __name__ == "__main__":
-	app = App()
-	app.title("Test")
-	app.mainloop()
-
