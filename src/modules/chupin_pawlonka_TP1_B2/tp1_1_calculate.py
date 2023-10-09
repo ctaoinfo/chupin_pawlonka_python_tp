@@ -8,9 +8,8 @@ class Calculate:
 		return self.number
 
 	@number.setter
-	def number(self, values):
-		self.number = values
-		pass
+	def number(self, value):
+		self.number = value
 
 	@property
 	def result(self):
@@ -19,20 +18,15 @@ class Calculate:
 	@result.setter
 	def result(self, value):
 		self.result = value
-		pass
 
 	def addition(self):
 		self.result += self.number
-		pass
 
 	def substraction(self):
 		self.result -= self.number
-		pass
 
 	def multiplication(self):
 		self.result *= self.number
-		pass
 
 	def division(self):
 		self.result /= self.number
-		pass
