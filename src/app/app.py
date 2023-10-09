@@ -54,20 +54,20 @@ class App:
 		while True:
 			calc.number = input('= ')
 			calc.result = calc.number
-			print('\t\t+')
-			print('\t\t-')
-			print('\t\t*')
-			print('\t\t/')
+			print('\t+ - / *')
 			nb = input(" ")
 			if nb == '+':
+				calc.number = input(' ')
 				calc.addition()
 			elif nb == '-':
+				calc.number = input(' ')
 				calc.substraction()
 			elif nb == '*':
+				calc.number = input(' ')
 				calc.multiplication()
 			elif nb == '/':
+				calc.number = input(' ')
 				calc.substraction()
-			calc.number = input(' ')
 			print(calc.result)
 
 	def tp12(self):
