@@ -11,7 +11,6 @@ class SumAndFactorial:
 	@number.setter
 	def number(self, value):
 		self.number = value
-		pass
 
 	@property
 	def result(self):
@@ -29,16 +28,11 @@ class SumAndFactorial:
 	@list_numbers.setter
 	def list_numbers(self, values):
 		self.list_numbers = values
-		pass
 
 	def sum(self, self.number, self.result):
 		for x in range(self.number):
 			self.result += x
-			pass
-		pass
 
 	def factorial(self, self.number, self.result):
 		for x in range(self.number):
 			self.result *= x
-			pass
-		pass
